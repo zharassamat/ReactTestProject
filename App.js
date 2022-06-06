@@ -1,26 +1,26 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 
 import ApiContainer from './App/Screens/ApiContainer';
 import DetailsContainer from './App/Screens/details/DetailsContainer';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-function HomeScreen({ navigation }) {
+function HomeScreen({navigation}) {
   return (
     <>
-        <ApiContainer />
-      </>  
+      <ApiContainer />
+    </>
   );
 }
 
-function DetailsScreen({ route, navigation }) {
-  const { itemId } = route.params;
- 
+function DetailsScreen({route, navigation}) {
+  const {itemId} = route.params;
+
   return (
     <>
-    <DetailsContainer />
-  </>  
+      <DetailsContainer />
+    </>
   );
 }
 
@@ -36,6 +36,5 @@ function App() {
     </NavigationContainer>
   );
 }
-
 
 export default App;
