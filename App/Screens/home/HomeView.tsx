@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {View, Text, Button, FlatList, ActivityIndicator} from 'react-native';
-import styles from './ApiStyles';
+import styles from './HomeStyles';
 import {useNavigation} from '@react-navigation/native';
 
-const ApiView = props => {
+const HomeView = props => {
   const {
     goForFetch,
     goForAxios,
@@ -40,4 +40,4 @@ const ApiView = props => {
     </View>
   );
 };
-export default ApiView;
+export default HomeView;

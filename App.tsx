@@ -1,23 +1,9 @@
 import React from 'react';
 
-import ApiContainer from './App/Screens/ApiContainer';
-import DetailsContainer from './App/Screens/details/DetailsContainer';
+import HomeScreen from './App/Screens/home/HomeScreen';
+import DetailsScreen from './App/Screens/details/DetailsScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-function HomeScreen({navigation}) {
-  return (
-      <ApiContainer />
-  );
-}
-
-function DetailsScreen({route, navigation}) {
-  const {itemId} = route.params;
-
-  return (
-      <DetailsContainer />
-  );
-}
 
 const Stack = createNativeStackNavigator();
 

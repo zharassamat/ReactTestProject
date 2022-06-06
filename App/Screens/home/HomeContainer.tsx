@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ApiView from './ApiView';
+import ApiView from './HomeView';
 import axios from 'axios';
-import styles from './ApiStyles';
+import styles from './HomeStyles';
 
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
