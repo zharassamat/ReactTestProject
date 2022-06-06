@@ -5,13 +5,7 @@ import styles from './ApiStyles';
 
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
-function MyBackButton() {
-  console.log('button clicked');
-  //const navigation = useNavigation();
-  //navigation.navigate('Details')
-}
-
-class ApiContainer extends Component {
+class ApiContainer extends Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -82,8 +76,8 @@ class ApiContainer extends Component {
             itemId: 2,
           });
         }}>
-        <Text style={styles.lightText}>{data.item.name}</Text>
-        <Text style={styles.lightText}>{data.item.rating}</Text>
+        <Text style={styles.textStyle}>{data.item.name}</Text>
+        <Text style={styles.textStyle}>{data.item.rating}</Text>
         <Image
           style={{width: '100%', height: 200}}
           source={{uri: data.item.poster}}

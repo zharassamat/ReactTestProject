@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Dimensions} from 'react-native';
+import {Dimensions,StyleSheet} from 'react-native';
 
 const deviceHeight = Dimensions.get('screen').height;
-const styles = {
+const styles = StyleSheet.create({
   parentContainer: {
     height: deviceHeight,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     marginTop: 50,
   },
   textStyle: {
@@ -28,5 +28,5 @@ const styles = {
     backgroundColor: '#fff',
     flex: 1 / 2,
   },
-};
+});
 export default styles;

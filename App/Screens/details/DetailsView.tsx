@@ -31,8 +31,8 @@ const DetailsView = props => {
     <View style={styles.parentContainer}>
       {!loading && axiosData != null && (
         <View style={styles.parentContainer}>
-          <Text style={styles.lightText}>{axiosData.name}</Text>
-          <Text style={styles.lightText}>{axiosData.description}</Text>
+          <Text style={styles.textStyle}>{axiosData.name}</Text>
+          <Text style={styles.textStyle}>{axiosData.description}</Text>
           <Image
             style={{width: '100%', height: 200}}
             source={{uri: axiosData.poster}}

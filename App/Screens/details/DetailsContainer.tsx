@@ -5,7 +5,7 @@ import styles from './DetailsStyles';
 
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
-class ApiContainer extends Component {
+class DetailsContainer extends Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,8 +53,8 @@ class ApiContainer extends Component {
   renderItem = data => {
     return (
       <TouchableOpacity style={styles.list} onPress={() => {}}>
-        <Text style={styles.lightText}>{data.name}</Text>
-        <Text style={styles.lightText}>{data.description}</Text>
+        <Text style={styles.textStyle}>{data.name}</Text>
+        <Text style={styles.textStyle}>{data.description}</Text>
         <Image
           style={{width: '100%', height: 200}}
           source={{uri: data.item.poster}}
@@ -64,11 +64,10 @@ class ApiContainer extends Component {
   };
 
   render() {
-    const {itemId, dataSource, fromFetch, fromAxios, loading, axiosData} =
+    const {dataSource, fromFetch, fromAxios, loading, axiosData} =
       this.state;
     return (
       <DetailsView
-        itemId={this.itemId}
         goForAxios={this.goForAxios}
         dataSource={dataSource}
         loading={loading}
@@ -82,4 +81,4 @@ class ApiContainer extends Component {
   }
 }
 
-export default ApiContainer;
+export default DetailsContainer;
