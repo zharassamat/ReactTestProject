@@ -5,16 +5,10 @@ import {useNavigation} from '@react-navigation/native';
 
 const HomeView = props => {
   const {
-    goForFetch,
-    goForAxios,
-    fromFetch,
-    fromAxios,
-    axiosData,
+    data,
     renderItem,
     FlatListItemSeparator,
-    dataSource,
-    loading,
-    navigate,
+    loading
   } = props;
   const navigation = useNavigation();
 
@@ -22,7 +16,7 @@ const HomeView = props => {
     <View style={styles.parentContainer}>
       {
         <FlatList
-          data={axiosData}
+          data={data}
           horizontal={false}
           numColumns={2}
           key={2}
