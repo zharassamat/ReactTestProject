@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import DetailsView from './DetailsView';
 import axios from 'axios';
-import styles from './DetailsStyles';
+import styles from './styles';
 
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 

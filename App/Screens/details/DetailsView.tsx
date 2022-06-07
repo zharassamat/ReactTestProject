@@ -7,7 +7,7 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
-import styles from './DetailsStyles';
+import styles from './styles';
 import {useRoute} from '@react-navigation/native';
 
 const DetailsView = props => {
