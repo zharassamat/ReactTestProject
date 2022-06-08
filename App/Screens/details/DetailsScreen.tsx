@@ -2,7 +2,7 @@ import React from 'react';
 
 import DetailsContainer from './DetailsContainer';
 
-function DetailsScreen({navigation}) {
+function DetailsScreen() {
   return <DetailsContainer />;
 }
 

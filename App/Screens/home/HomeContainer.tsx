@@ -2,20 +2,13 @@ import React, {useState, useEffect} from 'react';
 import ApiView from './HomeView';
 import styles from './styles';
 import FetchData from './HomeRepository';
+import { useGetMockDataQuery } from '../../data/services/Api';
 
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 function HomeContainer() {
   RenderItem();
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    if (data == null) {
-      FetchData(setIsLoading, setData);
-    }
-  });
+  const { data, error, isLoading } = useGetMockDataQuery('movies');
 
   return (
     <ApiView
@@ -33,7 +26,7 @@ function RenderItem() {
         style={styles.list}
         onPress={() => {
           navigation.navigate('Details', {
-            itemId: 2,
+            itemId: data.item.id,
           });
         }}>
         <Text style={styles.textStyle}>{data.item.name}</Text>

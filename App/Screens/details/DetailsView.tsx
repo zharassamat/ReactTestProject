@@ -1,35 +1,17 @@
 import React, {Component} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  Button,
-  FlatList,
-  ActivityIndicator,
-} from 'react-native';
+import {View, Text, Image, ActivityIndicator} from 'react-native';
 import styles from './styles';
 import {useRoute} from '@react-navigation/native';
 
 const DetailsView = props => {
-  const {
-    itemId,
-    goForAxios,
-    fromFetch,
-    fromAxios,
-    axiosData,
-    renderItem,
-    FlatListItemSeparator,
-    dataSource,
-    loading,
-    navigate,
-  } = props;
+  const {axiosData, loading} = props;
   const route = useRoute();
 
   //itemId: route.params.itemId
 
   return (
     <View style={styles.parentContainer}>
-      {!loading && axiosData != null && (
+      {!loading && axiosData != null ? (
         <View style={styles.parentContainer}>
           <Text style={styles.textStyle}>{axiosData.name}</Text>
           <Text style={styles.textStyle}>{axiosData.description}</Text>
@@ -38,8 +20,7 @@ const DetailsView = props => {
             source={{uri: axiosData.poster}}
           />
         </View>
-      )}
-      {loading && (
+      ) : (
         <View style={styles.loader}>
           <ActivityIndicator size="large" color="#0c9" />
           <Text style={{fontSize: 16, color: 'red'}}>Loading Data...</Text>
